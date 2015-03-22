@@ -11,45 +11,15 @@ The data presented here is grouped for the 30 subjects and 6 activities, and con
 
 ### Varibles in Summarized Data
 
-The naming convention for each measurement variable in the summarized data here follows the convention below:
-  [domain]_[measure type]_[signal_types (separated by underscores if multiple)]_[3-dim directional component]_[statistical moment]
-  
-This allows for clear sorting amongst the variables, which are the following:
-* subject_id:                                 Subject ID (one of 30 subjects)
-* activity_label:                             Activity Type (one of 6 types)
-* time_acc_body_[3 directions]_mean:          Mean Accelerometer values in Time Domain, Body Signal
-* time_acc_body_[3 directions]_std:           Std Dev Accelerometer values in Time Domain, Body Signal
-* time_acc_gravity_[3 directions]_mean:       Mean Accelerometer values in Time Domain, Gravity Signal
-* time_acc_gravity_[3 directions]_std:        Std Dev Accelerometer values in Time Domain, Gravity Signal
-* time_acc_body_jerk_[3 directions]_mean:     Mean Accelerometer values in Time Domain, Body Jerk Signal
-* time_acc_body_jerk_[3 directions]_std:      Std Dev Accelerometer values in Time Domain, Body Jerk Signal
-* time_gyro_body_[3 directions]_mean:         Mean Gyroscope values in Time Domain, Body Signal
-* time_gyro_body_[3 directions]_std:          Std Dev Gyroscope values in Time Domain, Body Signal
-* time_gyro_body_jerk_[3 directions]_mean:    Mean Gyroscope values in Time Domain, Body Jerk Signal
-* time_gyro_body_jerk_[3 directions]_std:     Std Dev Gyroscope values in Time Domain, Body Jerk Signal
-* time_acc_body_mag_mean:                     Mean Accelerometer Values in Time Domain, Body Magnitude Signal
-* time_acc_body_mag_std:                      Std Dev Accelerometer Values in Time Domain, Body Magnitude Signal
-* time_acc_gravity_mag_mean:                  Mean Accelerometer Values in Time Domain, Gravity Magnitude Signal
-* time_acc_gravity_mag_std:                   Std Dev Accelerometer Values in Time Domain, Gravity Magnitude Signal
-* time_acc_body_jerk_mag_mean:                Mean Accelerometer Values in Time Domain, Body Jerk Magnitude Signal
-* time_acc_body_jerk_mag_std:                 Std Dev Accelerometer Values in Time Domain, Body Jerk Jerk Signal
-* time_gyro_body_mag_mean:                    Mean Dev Gyroscope Values in Time Domain, Body Magnitude Signal
-* time_gyro_body_mag_std:                     Std Dev Gyroscope Values in Time Domain, Body Magnitude Signal
-* time_gyro_body_jerk_mag_mean:               Mean Dev Gyroscope Values in Time Domain, Body Jerk Magnitude Signal
-* time_gyro_body_jerk_mag_std:                Std Dev Gyroscope Values in Time Domain, Body Jerk Magnitude Signal
-* freq_acc_body_[3 directions]_mean:          Mean Accelerometer values in Frequency Domain, Body Signal
-* freq_acc_body_[3 directions]_std:           Std Dev Accelerometer values in Frequency Domain, Body Signal
-* freq_acc_body_jerk_[3 directions]_mean:     Mean Accelerometer values in Frequency Domain, Body Jerk Signal
-* freq_acc_body_jerk_[3 directions]_std:      Std Dev Accelerometer values in Frequency Domain, Body Jerk Signal
-* freq_gyro_body_[3 directions]_mean:         Mean Gyroscope values in Frequency Domain, Body Signal
-* freq_gyro_body_[3 directions]_std:          Std Dev Accelerometer values in Frequency Domain, Body Signal
-* freq_acc_body_mag_mean:                     Mean Accelerometer values in Frequency Domain, Body Magnitude Signal
-* freq_acc_body_mag_std:                      Std Dev Accelerometer values in Frequency Domain, Body Magnitude Signal
-* freq_acc_body_body_jerk_mag_mean:           Mean Accelerometer values in Frequency Domain, Body Jerk Magnitude Signal
-* freq_acc_body_body_jerk_mag_std:            Std Dev Accelerometer values in Frequency Domain, Body Jerk Magnitude Signal
-* freq_gyro_body_body_mag_mean:               Mean Gyroscope values in Frequency Domain, Body Magnitude Signal
-* freq_gyro_body_body_mag_std:                Std Dev Gyroscope values in Frequency Domain, Body Magnitude Signal
-* freq_gyro_body_body_jerk_mag_mean:          Mean Gyroscope values in Frequency Domain, Body Jerk Magnitude Signal
-* freq_gyro_body_body_jerk_mag_std:           Std Dev Gyroscope values in Frequency Domain, Body Jerk Magnitude Signal
+The first two columns identify subjects and activities: 
+  * subject_id:                                 Subject ID (one of 30 subjects)
+  * activity_label:                             Activity Type (one of 6 types)
+
+The remaining columns identify different kinds of measurements. The naming convention for each measurement variable in the summarized data here follows the convention below:
+* 1st part of name is the measurement domain (time or frequency)
+* 2nd part of name is the measurement device (accelerometer or gyroscope)
+* 3rd part of name is the signal type (separated by underscores if multiple signal types; includes body, gravity, magnitude, and jerk signals)
+* 4th part of name is the directional component in 3 dimensions (x, y, or z)
+* 5th part of name is the statistical moment (mean or standard deviation)
  
 The variables were already normalized to a [-1, 1] range in the raw data, so note that values can be negative for these observations.
