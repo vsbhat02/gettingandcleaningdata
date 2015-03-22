@@ -9,7 +9,7 @@ The raw data consists of training and test portions, obtained from the embedded 
 
 The data presented here is grouped for the 30 subjects and 6 activities, and contains an average of all individual mean and standard deviation measurements taken during the experiment. Thus, the raw data set which is comprised of 10,299 observational moments and 563 measurements is reduced to 180 groups of observations and 68 average measurements across each group.
 
-### Varibles in Summarized Data
+### Variables in Summarized Data
 
 The first two columns identify subjects and activities: 
   * subject_id:                                 Subject ID (one of 30 subjects)
